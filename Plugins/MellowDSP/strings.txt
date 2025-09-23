@@ -1,0 +1,5 @@
+PLUGIN_MELLOWDSP
+	EN	MellowDSP
+	
+PLUGIN_MELLOWDSP_DESC
+	EN	Upsampling, dithering and FIR convolution with CamillaDSP
