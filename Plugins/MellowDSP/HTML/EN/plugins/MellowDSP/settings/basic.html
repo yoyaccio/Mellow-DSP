@@ -1,4 +1,4 @@
-[% PROCESS settings/header.html %]
+[% PROCESS plugins/MellowDSP/settings/common.html %]
 
 <div class="prefDesc">
   <input name="enabled" id="enabled" type="checkbox" [% IF enabled %]checked[% END %]>
@@ -9,29 +9,11 @@
   <label for="upsample_rate">Upsampling Rate:</label>
   <select name="upsample_rate" id="upsample_rate">
     <option value="44100" [% IF upsample_rate == '44100' %]selected[% END %]>44.1 kHz</option>
-    <option value="88200" [% IF upsample_rate == '88200' %]selected[% END %]>88.2 kHz</option>
-    <option value="176400" [% IF upsample_rate == '176400' %]selected[% END %]>176.4 kHz</option>
-    <option value="352800" [% IF upsample_rate == '352800' %]selected[% END %]>352.8 kHz</option>
-    <option value="705600" [% IF upsample_rate == '705600' %]selected[% END %]>705.6 kHz</option>
+    <option value="48000" [% IF upsample_rate == '48000' %]selected[% END %]>48 kHz</option>
+    <option value="96000" [% IF upsample_rate == '96000' %]selected[% END %]>96 kHz</option>
+    <option value="192000" [% IF upsample_rate == '192000' %]selected[% END %]>192 kHz</option>
+    <option value="384000" [% IF upsample_rate == '384000' %]selected[% END %]>384 kHz</option>
     <option value="768000" [% IF upsample_rate == '768000' %]selected[% END %]>768 kHz</option>
-  </select>
-</div>
-
-<div class="prefDesc">
-  <label for="phase_response">Phase Response:</label>
-  <select name="phase_response" id="phase_response">
-    <option value="linear" [% IF phase_response == 'linear' %]selected[% END %]>Linear</option>
-    <option value="intermediate" [% IF phase_response == 'intermediate' %]selected[% END %]>Intermediate</option>
-    <option value="minimum" [% IF phase_response == 'minimum' %]selected[% END %]>Minimum</option>
-  </select>
-</div>
-
-<div class="prefDesc">
-  <label for="output_depth">Output Depth:</label>
-  <select name="output_depth" id="output_depth">
-    <option value="16" [% IF output_depth == '16' %]selected[% END %]>16-bit</option>
-    <option value="24" [% IF output_depth == '24' %]selected[% END %]>24-bit</option>
-    <option value="32" [% IF output_depth == '32' %]selected[% END %]>32-bit</option>
   </select>
 </div>
 
@@ -48,24 +30,39 @@
 </div>
 
 <div class="prefDesc">
-  <label for="format">Output Format:</label>
-  <select name="format" id="format">
-    <option value="wav" [% IF format == 'wav' %]selected[% END %]>WAV</option>
-    <option value="flac" [% IF format == 'flac' %]selected[% END %]>FLAC</option>
-  </select>
-</div>
-
-<div class="prefDesc">
   <label for="fir_file_left">FIR File Left:</label>
-  <input type="text" name="fir_file_left" id="fir_file_left" value="[% fir_file_left | html %]" size="60">
+  <input type="text" name="fir_file_left" id="fir_file_left" value="[% fir_file_left | html %]" size="40">
+  <input type="button" value="Browse..." onclick="browseFile('fir_file_left')">
 </div>
 
 <div class="prefDesc">
   <label for="fir_file_right">FIR File Right:</label>
-  <input type="text" name="fir_file_right" id="fir_file_right" value="[% fir_file_right | html %]" size="60">
+  <input type="text" name="fir_file_right" id="fir_file_right" value="[% fir_file_right | html %]" size="40">
+  <input type="button" value="Browse..." onclick="browseFile('fir_file_right')">
+</div>
+
+<div class="prefDesc">
+  <label for="output_format">Output Format:</label>
+  <select name="output_format" id="output_format">
+    <option value="wav" [% IF output_format == 'wav' %]selected[% END %]>WAV</option>
+    <option value="flac" [% IF output_format == 'flac' %]selected[% END %]>FLAC</option>
+  </select>
 </div>
 
 <input type="submit" name="saveSettings" value="[% "SAVE" | string %]" class="stdclick">
 <input type="submit" name="cancel" value="[% "CANCEL" | string %]" class="stdclick">
 
-[% PROCESS settings/footer.html %]
+<script>
+function browseFile(fieldId) {
+  var input = document.createElement('input');
+  input.type = 'file';
+  input.accept = '.wav,.WAV';
+  input.onchange = function(e) {
+    var file = e.target.files[0];
+    if (file) {
+      document.getElementById(fieldId).value = file.name;
+    }
+  };
+  input.click();
+}
+</script>
