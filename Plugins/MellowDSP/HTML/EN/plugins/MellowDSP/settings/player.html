@@ -1,0 +1,19 @@
+[% PROCESS settings/header.html %]
+[% WRAPPER setting title="PLUGIN_MELLOWDSP" desc="PLUGIN_MELLOWDSP_DESC" %]
+  <div class="prefDesc">
+    <input name="pref_enabled" id="pref_enabled" type="checkbox" [% IF pref_enabled %]checked[% END %]>
+    <label for="pref_enabled">Enable Mellow-DSP</label>
+  </div>
+  <div class="prefDesc">
+    <label for="pref_upsample_rate">Upsampling rate</label>
+    <select name="pref_upsample_rate" id="pref_upsample_rate">
+      <option value="44100"  [% IF pref_upsample_rate == '44100'  %]selected[% END %]>44.1 kHz</option>
+      <option value="88200"  [% IF pref_upsample_rate == '88200'  %]selected[% END %]>88.2 kHz</option>
+      <option value="176400" [% IF pref_upsample_rate == '176400' %]selected[% END %]>176.4 kHz</option>
+      <option value="352800" [% IF pref_upsample_rate == '352800' %]selected[% END %]>352.8 kHz</option>
+      <option value="705600" [% IF pref_upsample_rate == '705600' %]selected[% END %]>705.6 kHz</option>
+      <option value="768000" [% IF pref_upsample_rate == '768000' %]selected[% END %]>768 kHz</option>
+    </select>
+  </div>
+[% END %]
+[% PROCESS settings/footer.html %]

@@ -1,34 +1,35 @@
 package Plugins::MellowDSP::PlayerSettings;
+
 use strict;
 use warnings;
-
-use Slim::Utils::Prefs;
+use base qw(Slim::Web::Settings);
 
 my $prefs = preferences('plugin.mellowdsp');
 
-sub settingsPage {
-    my ($client, $params, $callback, @args) = @_;
+sub new {
+    my $class = shift;
+    return bless {}, $class;
+}
+
+sub name { 'PLUGIN_MELLOWDSP' }
+
+sub page { 'plugins/MellowDSP/settings/player.html' }
+
+sub prefs { ($prefs, qw(enabled upsample_rate)) }
+
+sub handler {
+    my ($class, $client, $params) = @_;
+    my $cp = $prefs->client($client);
 
     if ($params->{saveSettings}) {
-        $prefs->client($client)->set('enabled', $params->{enabled} ? 1 : 0);
-        $prefs->client($client)->set('upsample_rate', $params->{upsample_rate} || '44100');
-        $prefs->client($client)->set('dithering', $params->{dithering} || 'none');
-        $prefs->client($client)->set('fir_file_left', $params->{fir_file_left} || '');
-        $prefs->client($client)->set('fir_file_right', $params->{fir_file_right} || '');
-        $prefs->client($client)->set('output_format', $params->{output_format} || 'wav');
+        $cp->set('enabled', $params->{pref_enabled} ? 1 : 0);
+        $cp->set('upsample_rate', $params->{pref_upsample_rate} || '44100');
     }
 
-    $params->{enabled}        = $prefs->client($client)->get('enabled');
-    $params->{upsample_rate}  = $prefs->client($client)->get('upsample_rate');
-    $params->{dithering}      = $prefs->client($client)->get('dithering');
-    $params->{fir_file_left}  = $prefs->client($client)->get('fir_file_left');
-    $params->{fir_file_right} = $prefs->client($client)->get('fir_file_right');
-    $params->{output_format}  = $prefs->client($client)->get('output_format');
+    $params->{pref_enabled}       = $cp->get('enabled')       || 0;
+    $params->{pref_upsample_rate} = $cp->get('upsample_rate') || '44100';
 
-    return Slim::Web::HTTP::filltemplatefile(
-        'plugins/MellowDSP/settings/basic.html',
-        $params
-    );
+    return $class->SUPER::handler($client, $params);
 }
 
 1;
