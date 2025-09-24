@@ -47,4 +47,20 @@
   </select>
 [% END %]
 
+[% WRAPPER setting title="Output Format" desc="Select output stream format" %]
+  <select name="outputfmt">
+    [% FOREACH fmt IN [ 'flac','wav' ] %]
+      <option value="[% fmt %]" [% IF outputfmt == fmt %]selected[% END %]>[% fmt %]</option>
+    [% END %]
+  </select>
+[% END %]
+
+[% WRAPPER setting title="FIR Filter Left" desc="Path to left FIR wav file" %]
+  <input type="text" name="fir_left" size="40" value="[% fir_left %]">
+[% END %]
+
+[% WRAPPER setting title="FIR Filter Right" desc="Path to right FIR wav file" %]
+  <input type="text" name="fir_right" size="40" value="[% fir_right %]">
+[% END %]
+
 [% PROCESS settings/footer.html %]
