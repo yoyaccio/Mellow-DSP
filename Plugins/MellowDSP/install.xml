@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension>
-    <name>PLUGIN_MELLOWDSP</name>
-    <module>Plugins::MellowDSP::Plugin</module>
-    <version>0.1.14</version>
-    <description>PLUGIN_MELLOWDSP_DESC</description>
-    <creator>yoyaccio</creator>
-    <category>audio</category>
-    <type>player</type>
+  <name>MellowDSP</name>
+  <module>Plugins::MellowDSP::Plugin</module>
+  <version>0.1.14</version>
+  <description>Upsampling, dithering and FIR convolution with CamillaDSP</description>
+  <creator>yoyaccio</creator>
+  <email>yoyaccio@gmail.com</email>
+  <homepageURL>https://github.com/yoyaccio/Mellow-DSP</homepageURL>
+  <link>https://github.com/yoyaccio/Mellow-DSP</link>
+  <category>audio</category>
+  <targetApplication>
+    <id>SqueezeboxServer</id>
+    <minVersion>7.9</minVersion>
+    <maxVersion>*</maxVersion>
+  </targetApplication>
 </extension>
