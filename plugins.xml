@@ -3,13 +3,13 @@
   <plugins>
     <plugin name="MellowDSP" version="0.1.18" minTarget="7.9" maxTarget="*">
       <title lang="EN">Mellow-DSP</title>
-      <desc lang="EN">Upsampling, dithering and FIR convolution with CamillaDSP. Per-player settings.</desc>
+      <desc lang="EN">Basic upsampling and enable/disable</desc>
       <category>audio</category>
       <creator>yoyaccio</creator>
       <email>yoyaccio@gmail.com</email>
       <homepageURL>https://github.com/yoyaccio/Mellow-DSP</homepageURL>
       <url>https://raw.githubusercontent.com/yoyaccio/Mellow-DSP/main/packages/MellowDSP.zip</url>
-      <sha>0106b45009206a426691d44df80b363fc7e8ba01</sha>
+      <sha>b7a65e4a4a4f897192c73e709ba4062ce0b15b63</sha>
     </plugin>
   </plugins>
 </extensions>
