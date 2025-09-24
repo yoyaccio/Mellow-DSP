@@ -3,13 +3,13 @@
   <plugins>
     <plugin name="MellowDSP" version="0.1.22" minTarget="7.9" maxTarget="*">
       <title lang="EN">Mellow-DSP</title>
-      <desc lang="EN">Test plugin with checkbox</desc>
+      <desc lang="EN">Basic upsampling and enable/disable</desc>
       <category>audio</category>
       <creator>yoyaccio</creator>
       <email>yoyaccio@gmail.com</email>
       <homepageURL>https://github.com/yoyaccio/Mellow-DSP</homepageURL>
       <url>https://raw.githubusercontent.com/yoyaccio/Mellow-DSP/main/packages/MellowDSP.zip</url>
-      <sha>99ae1fbd47607506c1fc06fe1a5615aa72da8ca1</sha>
+      <sha>869ec7067d0acdcd30dcaa4d261673aed6386346</sha>
     </plugin>
   </plugins>
 </extensions>
