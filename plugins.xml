@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extensions>
-  <plugins>
-    <plugin name="MellowDSP" version="0.1.22" minTarget="7.9" maxTarget="*">
-      <title lang="EN">Mellow-DSP</title>
-      <desc lang="EN">Basic upsampling and enable/disable</desc>
-      <category>audio</category>
-      <creator>yoyaccio</creator>
-      <email>yoyaccio@gmail.com</email>
-      <homepageURL>https://github.com/yoyaccio/Mellow-DSP</homepageURL>
-      <url>https://raw.githubusercontent.com/yoyaccio/Mellow-DSP/main/packages/MellowDSP.zip</url>
-      <sha>869ec7067d0acdcd30dcaa4d261673aed6386346</sha>
-    </plugin>
-  </plugins>
+    <extension>
+        <name>MellowDSP</name>
+        <module>Plugins::MellowDSP::Plugin</module>
+        <version>0.2.0</version>
+        <description>Advanced audio upsampling and FIR filtering</description>
+        <creator>yoyaccio</creator>
+        <email>yoyaccio@gmail.com</email>
+        <homepageURL>https://github.com/yoyaccio/Mellow-DSP</homepageURL>
+        <category>audio</category>
+        <targetApplication>
+            <id>SqueezeboxServer</id>
+            <minVersion>7.9</minVersion>
+            <maxVersion>*</maxVersion>
+        </targetApplication>
+        <sha>e76de7c82515bc6a025d6d641a174dba9125c0f4</sha>
+        <url>https://github.com/yoyaccio/Mellow-DSP/raw/main/MellowDSP.zip</url>
+    </extension>
 </extensions>

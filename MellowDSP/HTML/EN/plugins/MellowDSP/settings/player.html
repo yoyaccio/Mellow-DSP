@@ -1,0 +1,97 @@
+[% PROCESS settings/header.html %]
+
+[% WRAPPER setting title="PLUGIN_MELLOWDSP" desc="PLUGIN_MELLOWDSP_DESC" %]
+
+<style>
+.mellowdsp-section {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.mellowdsp-section h3 {
+    margin-top: 0;
+    color: #333;
+}
+.prefDesc {
+    margin: 8px 0;
+}
+.prefDesc label {
+    display: inline-block;
+    width: 150px;
+    font-weight: bold;
+}
+</style>
+
+<div class="mellowdsp-section">
+    <h3>MellowDSP Audio Processing</h3>
+    
+    <div class="prefDesc">
+        <input type="checkbox" name="enabled" id="enabled" value="1" [% IF enabled %]checked[% END %]>
+        <label for="enabled">Enable MellowDSP</label>
+    </div>
+</div>
+
+<div class="mellowdsp-section">
+    <h3>Upsampling & Processing</h3>
+    
+    <div class="prefDesc">
+        <label for="upsampling">Upsampling Rate:</label>
+        <select name="upsampling" id="upsampling">
+            <option value="44.1k" [% IF upsampling == '44.1k' %]selected[% END %]>44.1 kHz (Native)</option>
+            <option value="88.2k" [% IF upsampling == '88.2k' %]selected[% END %]>88.2 kHz</option>
+            <option value="176.4k" [% IF upsampling == '176.4k' %]selected[% END %]>176.4 kHz</option>
+            <option value="352.8k" [% IF upsampling == '352.8k' %]selected[% END %]>352.8 kHz</option>
+            <option value="705.6k" [% IF upsampling == '705.6k' %]selected[% END %]>705.6 kHz</option>
+            <option value="768k" [% IF upsampling == '768k' %]selected[% END %]>768 kHz</option>
+        </select>
+    </div>
+    
+    <div class="prefDesc">
+        <label for="phase_response">Phase Response:</label>
+        <select name="phase_response" id="phase_response">
+            <option value="linear" [% IF phase_response == 'linear' %]selected[% END %]>Linear Phase</option>
+            <option value="intermediate" [% IF phase_response == 'intermediate' %]selected[% END %]>Intermediate Phase</option>
+            <option value="minimum" [% IF phase_response == 'minimum' %]selected[% END %]>Minimum Phase</option>
+        </select>
+    </div>
+</div>
+
+<div class="mellowdsp-section">
+    <h3>Output Settings</h3>
+    
+    <div class="prefDesc">
+        <label for="output_depth">Output Depth:</label>
+        <select name="output_depth" id="output_depth">
+            <option value="16-bit" [% IF output_depth == '16-bit' %]selected[% END %]>16-bit</option>
+            <option value="24-bit" [% IF output_depth == '24-bit' %]selected[% END %]>24-bit</option>
+            <option value="32-bit" [% IF output_depth == '32-bit' %]selected[% END %]>32-bit</option>
+        </select>
+    </div>
+    
+    <div class="prefDesc">
+        <label for="dithering">Dithering:</label>
+        <select name="dithering" id="dithering">
+            <option value="none" [% IF dithering == 'none' %]selected[% END %]>None</option>
+            <option value="triangular" [% IF dithering == 'triangular' %]selected[% END %]>Triangular</option>
+            <option value="shaped" [% IF dithering == 'shaped' %]selected[% END %]>Noise Shaped</option>
+            <option value="lipshitz" [% IF dithering == 'lipshitz' %]selected[% END %]>Lipshitz</option>
+            <option value="fweighted" [% IF dithering == 'fweighted' %]selected[% END %]>Frequency Weighted</option>
+        </select>
+    </div>
+    
+    <div class="prefDesc">
+        <label for="target_precision">Target Precision:</label>
+        <select name="target_precision" id="target_precision">
+            <option value="16-bit" [% IF target_precision == '16-bit' %]selected[% END %]>16-bit</option>
+            <option value="18-bit" [% IF target_precision == '18-bit' %]selected[% END %]>18-bit</option>
+            <option value="20-bit" [% IF target_precision == '20-bit' %]selected[% END %]>20-bit</option>
+            <option value="22-bit" [% IF target_precision == '22-bit' %]selected[% END %]>22-bit</option>
+            <option value="24-bit" [% IF target_precision == '24-bit' %]selected[% END %]>24-bit</option>
+        </select>
+    </div>
+</div>
+
+[% END %]
+
+[% PROCESS settings/footer.html %]

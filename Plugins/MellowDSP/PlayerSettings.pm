@@ -9,15 +9,13 @@ my $prefs = preferences('plugin.mellowdsp');
 my $log   = logger('plugin.mellowdsp');
 
 sub handler {
-    my ($class, $client, $params, $callback, @args) = @_;
+    my ($client, $params, $callback, @args) = @_;
 
     if ($params->{saveSettings}) {
-        $prefs->set('enabled', $params->{enabled} ? 1 : 0);
-        $prefs->set('upsample_rate', $params->{upsample_rate} || '44100');
+        $prefs->client($client)->set('enabled', $params->{pref_enabled} ? 1 : 0);
     }
 
-    $params->{enabled}       = $prefs->get('enabled')       || 0;
-    $params->{upsample_rate} = $prefs->get('upsample_rate') || '44100';
+    $params->{pref_enabled} = $prefs->client($client)->get('enabled') || 0;
 
     return Slim::Web::HTTP::filltemplatefile(
         'plugins/MellowDSP/settings/basic.html',

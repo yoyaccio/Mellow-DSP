@@ -2,27 +2,18 @@ package Plugins::MellowDSP::Plugin;
 
 use strict;
 use warnings;
-
 use Slim::Utils::Log;
 use Slim::Utils::Prefs;
-use Slim::Web::Settings;
-
-use Plugins::MellowDSP::PlayerSettings;
+use Slim::Web::Pages;
 
 my $log   = logger('plugin.mellowdsp');
 my $prefs = preferences('plugin.mellowdsp');
 
 sub initPlugin {
-    $log->info("Inizializzazione MellowDSP...");
-
-    Slim::Web::Settings->addSettingsPage(
-        {
-            'id'     => 'MellowDSP',
-            'name'   => 'PLUGIN_MELLOWDSP',
-            'module' => 'Plugins::MellowDSP::PlayerSettings',
-        }
+    Slim::Web::Pages->addPageFunction(
+        'plugins/MellowDSP/settings/basic.html',
+        \&Plugins::MellowDSP::PlayerSettings::handler
     );
-
     return 1;
 }
 
