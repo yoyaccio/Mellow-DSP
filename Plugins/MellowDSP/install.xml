@@ -2,8 +2,8 @@
 <extension>
   <name>MellowDSP</name>
   <module>Plugins::MellowDSP::Plugin</module>
-  <version>0.1.14</version>
-  <description>Upsampling, dithering and FIR convolution with CamillaDSP</description>
+  <version>0.1.16</version>
+  <description>Upsampling, dithering and FIR convolution with CamillaDSP. Per-player settings.</description>
   <creator>yoyaccio</creator>
   <email>yoyaccio@gmail.com</email>
   <homepageURL>https://github.com/yoyaccio/Mellow-DSP</homepageURL>

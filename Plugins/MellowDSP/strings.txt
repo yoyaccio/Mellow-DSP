@@ -2,4 +2,4 @@ PLUGIN_MELLOWDSP
 	EN	Mellow-DSP
 
 PLUGIN_MELLOWDSP_DESC
-	EN	Upsampling, dithering and FIR convolution with CamillaDSP
+	EN	Upsampling, dithering and FIR convolution with CamillaDSP. Per-player settings.
