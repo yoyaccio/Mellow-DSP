@@ -2,12 +2,11 @@
 <extension>
   <name>MellowDSP</name>
   <module>Plugins::MellowDSP::Plugin</module>
-  <version>0.1.22</version>
-  <description>Upsampling, dithering and FIR convolution with CamillaDSP. Per-player settings.</description>
+  <version>0.2.1</version>
+  <description>Simple per-player enable checkbox</description>
   <creator>yoyaccio</creator>
   <email>yoyaccio@gmail.com</email>
   <homepageURL>https://github.com/yoyaccio/Mellow-DSP</homepageURL>
-  <link>https://github.com/yoyaccio/Mellow-DSP</link>
   <category>audio</category>
   <targetApplication>
     <id>SqueezeboxServer</id>

@@ -1,5 +1,2 @@
-PLUGIN_MELLOWDSP
-	EN	Mellow-DSP
-
-PLUGIN_MELLOWDSP_DESC
-	EN	Test plugin with checkbox
+PLUGIN_MELLOWDSP	EN	Mellow-DSP
+PLUGIN_MELLOWDSP_DESC	EN	Simple per-player enable checkbox
