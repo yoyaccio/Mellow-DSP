@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extensions>
-  <plugin name="MellowDSP" version="0.2.1" minTarget="7.9" maxTarget="*">
-    <title lang="EN">Mellow-DSP</title>
-    <desc  lang="EN">Simple per-player enable checkbox</desc>
-    <category>audio</category>
+  <extension>
+    <name>MellowDSP</name>
+    <module>Plugins::MellowDSP::Plugin</module>
+    <version>0.2.1</version>
+    <description>Simple per-player enable checkbox</description>
     <creator>yoyaccio</creator>
     <email>yoyaccio@gmail.com</email>
+    <homepageURL>https://github.com/yoyaccio/Mellow-DSP</homepageURL>
+    <category>audio</category>
+    <targetApplication>
+      <id>SqueezeboxServer</id>
+      <minVersion>7.9</minVersion>
+      <maxVersion>*</maxVersion>
+    </targetApplication>
     <url>https://raw.githubusercontent.com/yoyaccio/Mellow-DSP/main/packages/MellowDSP-0.2.1.zip</url>
     <sha>602a63a124dc5b11884638c182a16b5837c39a91</sha>
-  </plugin>
+  </extension>
 </extensions>
