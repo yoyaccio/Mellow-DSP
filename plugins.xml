@@ -14,7 +14,7 @@
             <minVersion>7.9</minVersion>
             <maxVersion>*</maxVersion>
         </targetApplication>
-        <sha>e76de7c82515bc6a025d6d641a174dba9125c0f4</sha>
-        <url>https://github.com/yoyaccio/Mellow-DSP/raw/main/MellowDSP.zip</url>
+        <sha>b0f645908f8955ca8a686d5e55b26c74eb050ec2</sha>
+        <url>https://github.com/yoyaccio/Mellow-DSP/raw/main/packages/MellowDSP.zip</url>
     </extension>
 </extensions>
