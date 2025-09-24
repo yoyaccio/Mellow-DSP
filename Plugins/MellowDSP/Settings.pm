@@ -27,6 +27,7 @@ sub handler {
         $prefs->client($client)->set('outputfmt',  $params->{outputfmt});
         $prefs->client($client)->set('fir_left',   $params->{fir_left});
         $prefs->client($client)->set('fir_right',  $params->{fir_right});
+        $prefs->client($client)->set('fir_text',   $params->{fir_text});
     }
 
     $params->{enabled}    = $prefs->client($client)->get('enabled')    || 0;
@@ -38,6 +39,7 @@ sub handler {
     $params->{outputfmt}  = $prefs->client($client)->get('outputfmt')  || 'flac';
     $params->{fir_left}   = $prefs->client($client)->get('fir_left')   || '';
     $params->{fir_right}  = $prefs->client($client)->get('fir_right')  || '';
+    $params->{fir_text}   = $prefs->client($client)->get('fir_text')   || '';
 
     return $class->SUPER::handler($client, $params);
 }

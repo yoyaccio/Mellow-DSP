@@ -2,8 +2,8 @@
 <extension>
   <name>MellowDSP</name>
   <module>Plugins::MellowDSP::Plugin</module>
-  <version>0.2.5</version>
-  <description>Player DSP with FIR filter fields and output format</description>
+  <version>0.2.6</version>
+  <description>Player DSP with FIR upload and text field</description>
   <creator>yoyaccio</creator>
   <email>yoyaccio@gmail.com</email>
   <homepageURL>https://github.com/yoyaccio/Mellow-DSP</homepageURL>

@@ -57,10 +57,16 @@
 
 [% WRAPPER setting title="FIR Filter Left" desc="Path to left FIR wav file" %]
   <input type="text" name="fir_left" size="40" value="[% fir_left %]">
+  <input type="file" name="fir_left_file">
 [% END %]
 
 [% WRAPPER setting title="FIR Filter Right" desc="Path to right FIR wav file" %]
   <input type="text" name="fir_right" size="40" value="[% fir_right %]">
+  <input type="file" name="fir_right_file">
+[% END %]
+
+[% WRAPPER setting title="FIR Text" desc="Paste FIR coefficients or notes" %]
+  <textarea name="fir_text" rows="5" cols="60">[% fir_text %]</textarea>
 [% END %]
 
 [% PROCESS settings/footer.html %]
