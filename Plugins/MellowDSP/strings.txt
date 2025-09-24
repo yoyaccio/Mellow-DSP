@@ -1,2 +1,4 @@
-PLUGIN_MELLOWDSP	EN	Mellow-DSP
-PLUGIN_MELLOWDSP_DESC	EN	Simple per-player enable checkbox
+EN {
+PLUGIN_MELLOWDSP	Mellow-DSP
+PLUGIN_MELLOWDSP_DESC	Player DSP plugin with FIR and resampling
+}
