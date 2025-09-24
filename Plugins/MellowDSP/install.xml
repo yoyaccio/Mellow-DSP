@@ -2,8 +2,8 @@
 <extension>
   <name>MellowDSP</name>
   <module>Plugins::MellowDSP::Plugin</module>
-  <version>0.2.2</version>
-  <description>Simple per-player enable checkbox</description>
+  <version>0.2.4</version>
+  <description>Player DSP settings with upsampling and dithering controls</description>
   <creator>yoyaccio</creator>
   <email>yoyaccio@gmail.com</email>
   <homepageURL>https://github.com/yoyaccio/Mellow-DSP</homepageURL>

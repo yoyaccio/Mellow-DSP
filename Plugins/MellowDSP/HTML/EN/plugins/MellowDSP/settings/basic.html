@@ -7,4 +7,44 @@
   </div>
 [% END %]
 
+[% WRAPPER setting title="Upsampling Rate" desc="Select target sample rate" %]
+  <select name="upsampling">
+    [% FOREACH rate IN [ '44.1k','88.2k','176.4k','352.8k','705.6k','768k' ] %]
+      <option value="[% rate %]" [% IF upsampling == rate %]selected[% END %]>[% rate %]</option>
+    [% END %]
+  </select>
+[% END %]
+
+[% WRAPPER setting title="Phase Response" desc="Choose filter phase type" %]
+  <select name="phase">
+    [% FOREACH mode IN [ 'linear','intermediate','minimum' ] %]
+      <option value="[% mode %]" [% IF phase == mode %]selected[% END %]>[% mode %]</option>
+    [% END %]
+  </select>
+[% END %]
+
+[% WRAPPER setting title="Output Depth" desc="Select bit depth" %]
+  <select name="depth">
+    [% FOREACH bits IN [ '16-bit','24-bit','32-bit' ] %]
+      <option value="[% bits %]" [% IF depth == bits %]selected[% END %]>[% bits %]</option>
+    [% END %]
+  </select>
+[% END %]
+
+[% WRAPPER setting title="Dithering" desc="Select dithering type" %]
+  <select name="dither">
+    [% FOREACH d IN [ 'none','triangular','shaped','lipshitz','fweighted' ] %]
+      <option value="[% d %]" [% IF dither == d %]selected[% END %]>[% d %]</option>
+    [% END %]
+  </select>
+[% END %]
+
+[% WRAPPER setting title="Target Precision" desc="Select target precision" %]
+  <select name="precision">
+    [% FOREACH p IN [ '16-bit','18-bit','20-bit','22-bit','24-bit' ] %]
+      <option value="[% p %]" [% IF precision == p %]selected[% END %]>[% p %]</option>
+    [% END %]
+  </select>
+[% END %]
+
 [% PROCESS settings/footer.html %]

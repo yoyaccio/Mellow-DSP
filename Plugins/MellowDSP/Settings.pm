@@ -18,10 +18,20 @@ sub handler {
     my ($class, $client, $params) = @_;
 
     if ($params->{saveSettings}) {
-        $prefs->client($client)->set('enabled', $params->{enabled} ? 1 : 0);
+        $prefs->client($client)->set('enabled',    $params->{enabled} ? 1 : 0);
+        $prefs->client($client)->set('upsampling', $params->{upsampling});
+        $prefs->client($client)->set('phase',      $params->{phase});
+        $prefs->client($client)->set('depth',      $params->{depth});
+        $prefs->client($client)->set('dither',     $params->{dither});
+        $prefs->client($client)->set('precision',  $params->{precision});
     }
 
-    $params->{enabled} = $prefs->client($client)->get('enabled') || 0;
+    $params->{enabled}    = $prefs->client($client)->get('enabled')    || 0;
+    $params->{upsampling} = $prefs->client($client)->get('upsampling') || '44.1k';
+    $params->{phase}      = $prefs->client($client)->get('phase')      || 'linear';
+    $params->{depth}      = $prefs->client($client)->get('depth')      || '16-bit';
+    $params->{dither}     = $prefs->client($client)->get('dither')     || 'none';
+    $params->{precision}  = $prefs->client($client)->get('precision')  || '16-bit';
 
     return $class->SUPER::handler($client, $params);
 }
