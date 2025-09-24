@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extensions>
   <plugins>
-    <plugin name="MellowDSP" version="0.2.8" minTarget="7.9" maxTarget="*">
+    <plugin name="MellowDSP" version="0.2.9" minTarget="7.9" maxTarget="*">
       <title lang="EN">Mellow-DSP</title>
-      <desc lang="EN">Auto-resample FIR WAV to output rate using SoX</desc>
+      <desc lang="EN">Logging, proper strings, full dithering list</desc>
       <category>audio</category>
       <creator>yoyaccio</creator>
       <email>yoyaccio@gmail.com</email>
       <homepageURL>https://github.com/yoyaccio/Mellow-DSP</homepageURL>
-      <url>https://raw.githubusercontent.com/yoyaccio/Mellow-DSP/main/packages/MellowDSP-0.2.8.zip</url>
-      <sha>7d608e4fc80c1ab42c494c99484211b243c38a97</sha>
+      <url>https://raw.githubusercontent.com/yoyaccio/Mellow-DSP/main/packages/MellowDSP-0.2.9.zip</url>
+      <sha>ecaa26ef3f78e0f057b84cbf588acaebba37e534</sha>
     </plugin>
   </plugins>
 </extensions>
