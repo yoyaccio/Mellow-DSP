@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extensions>
   <plugins>
-    <plugin name="MellowDSP" version="0.3.5" minTarget="7.9" maxTarget="*">
+    <plugin name="MellowDSP" version="0.3.6" minTarget="7.9" maxTarget="*">
       <title lang="EN">Mellow-DSP</title>
-      <desc lang="EN">Fixed strings.txt with proper TABs, stable settings menu</desc>
+      <desc lang="EN">Switch to block-format strings.txt, fix parsing issues</desc>
       <category>audio</category>
       <creator>yoyaccio</creator>
       <email>yoyaccio@gmail.com</email>
       <homepageURL>https://github.com/yoyaccio/Mellow-DSP</homepageURL>
-      <url>https://raw.githubusercontent.com/yoyaccio/Mellow-DSP/main/packages/MellowDSP-0.3.5.zip</url>
-      <sha>efabeafc2d00ceb620748ad536948c41bc4c5fea</sha>
+      <url>https://raw.githubusercontent.com/yoyaccio/Mellow-DSP/main/packages/MellowDSP-0.3.6.zip</url>
+      <sha>4dd4c6afc841038f572a39509f5dd262f8666081</sha>
     </plugin>
   </plugins>
 </extensions>
