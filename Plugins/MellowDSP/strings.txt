@@ -1,4 +1,4 @@
 EN {
-PLUGIN_MELLOWDSP	Mellow-DSP
-PLUGIN_MELLOWDSP_DESC	Player DSP plugin with FIR and resampling
+PLUGIN_MELLOWDSP    Mellow-DSP
+PLUGIN_MELLOWDSP_DESC    Advanced DSP with FIR, resampling and CamillaDSP integration
 }

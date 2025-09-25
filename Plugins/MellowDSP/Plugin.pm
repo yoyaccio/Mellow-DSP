@@ -4,25 +4,19 @@ use strict;
 use warnings;
 use Slim::Utils::Log;
 use Slim::Utils::Prefs;
+use Plugins::MellowDSP::Settings;
 
-my $log = Slim::Utils::Log->addLogCategory({
-  category     => 'plugin.mellowdsp',
-  defaultLevel => 'ERROR',
-  description  => 'PLUGIN_MELLOWDSP',
-});
-
+my $log   = logger('plugin.mellowdsp');
 my $prefs = preferences('plugin.mellowdsp');
 
 sub initPlugin {
-  $prefs->init({ enabled => 0 });
-
-  if ( main::WEBUI ) {
-    require Plugins::MellowDSP::Settings;
+    $log->info("MellowDSP plugin initialized");
     Plugins::MellowDSP::Settings->new;
-  }
-  return 1;
+    return 1;
 }
 
-sub getDisplayName { return 'PLUGIN_MELLOWDSP'; }
+sub getDisplayName {
+    return 'PLUGIN_MELLOWDSP';
+}
 
 1;

@@ -2,8 +2,8 @@
 <extension>
   <name>MellowDSP</name>
   <module>Plugins::MellowDSP::Plugin</module>
-  <version>0.3.0</version>
-  <description>MellowDSP with integrated CamillaDSP binary</description>
+  <version>0.3.1</version>
+  <description>Fix settings menu, proper strings, safe dirs, CamillaDSP integration</description>
   <creator>yoyaccio</creator>
   <email>yoyaccio@gmail.com</email>
   <homepageURL>https://github.com/yoyaccio/Mellow-DSP</homepageURL>
