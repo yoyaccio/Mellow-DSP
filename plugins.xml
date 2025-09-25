@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extensions>
   <plugins>
-    <plugin name="MellowDSP" version="0.3.2" minTarget="7.9" maxTarget="*">
+    <plugin name="MellowDSP" version="0.3.3" minTarget="7.9" maxTarget="*">
       <title lang="EN">Mellow-DSP</title>
-      <desc lang="EN">Fixed strings format, full menu visible, CamillaDSP integration</desc>
+      <desc lang="EN">Fixed strings.txt format, full settings menu, CamillaDSP integration</desc>
       <category>audio</category>
       <creator>yoyaccio</creator>
       <email>yoyaccio@gmail.com</email>
       <homepageURL>https://github.com/yoyaccio/Mellow-DSP</homepageURL>
-      <url>https://raw.githubusercontent.com/yoyaccio/Mellow-DSP/main/packages/MellowDSP-0.3.2.zip</url>
-      <sha>1ed4b73efbc6f23b4b00ae9ce1611b0ea71a985b</sha>
+      <url>https://raw.githubusercontent.com/yoyaccio/Mellow-DSP/main/packages/MellowDSP-0.3.3.zip</url>
+      <sha>3285a506c19c25ba0683450200c5437af162ff3c</sha>
     </plugin>
   </plugins>
 </extensions>
