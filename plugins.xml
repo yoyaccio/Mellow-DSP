@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extensions>
   <plugins>
-    <plugin name="MellowDSP" version="0.3.7" minTarget="7.9" maxTarget="*">
+    <plugin name="MellowDSP" version="0.3.8" minTarget="7.9" maxTarget="*">
       <title lang="EN">Mellow-DSP</title>
-      <desc lang="EN">Fixed strings.txt encoding (UTF-8 LF, TABs only)</desc>
+      <desc lang="EN">Fix strings.txt with TABs only, UTF-8 LF</desc>
       <category>audio</category>
       <creator>yoyaccio</creator>
       <email>yoyaccio@gmail.com</email>
       <homepageURL>https://github.com/yoyaccio/Mellow-DSP</homepageURL>
-      <url>https://raw.githubusercontent.com/yoyaccio/Mellow-DSP/main/packages/MellowDSP-0.3.7.zip</url>
-      <sha>40f050da496b6acf54983abe127693a8f852f74c</sha>
+      <url>https://raw.githubusercontent.com/yoyaccio/Mellow-DSP/main/packages/MellowDSP-0.3.8.zip</url>
+      <sha>43b20be5d34052c16723c069f285f43234e108aa</sha>
     </plugin>
   </plugins>
 </extensions>
