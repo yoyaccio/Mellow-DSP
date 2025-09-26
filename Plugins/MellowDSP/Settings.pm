@@ -34,29 +34,13 @@ sub handler {
 
     my $base = Slim::Utils::PluginManager->allPlugins->{'MellowDSP'}->{basedir};
     my $datadir = catdir($base, 'data');
-    my $filters = catdir($datadir, 'filters');
-    make_path($filters) unless -d $filters;
+    make_path($datadir) unless -d $datadir;
 
     if ($params->{saveSettings}) {
         foreach my $key (qw(enabled upsampling phase depth dither precision outputfmt fir_left fir_right fir_text)) {
             $prefs->client($client)->set($key, $params->{$key});
         }
-
-        # scrive config.json di CamillaDSP
-        my $jsonfile = catfile($datadir, 'camilladsp_config.json');
-        if (open my $fh, '>', $jsonfile) {
-            print $fh "{\n";
-            print $fh "  \"samplerate\": \"$params->{upsampling}\",\n";
-            print $fh "  \"dither\": \"$params->{dither}\",\n";
-            print $fh "  \"bitdepth\": \"$params->{depth}\",\n";
-            print $fh "  \"output_format\": \"$params->{outputfmt}\",\n";
-            print $fh "  \"fir_left\": \"$params->{fir_left}\",\n";
-            print $fh "  \"fir_right\": \"$params->{fir_right}\"\n";
-            print $fh "}\n";
-            close $fh;
-        }
-
-        $log->info("Saved settings and wrote CamillaDSP config: $jsonfile");
+        $log->info("MellowDSP settings saved");
     }
 
     return $class->SUPER::handler($client, $params);

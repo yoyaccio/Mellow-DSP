@@ -1,4 +1,2 @@
-EN {
-PLUGIN_MELLOWDSP    Mellow-DSP
-PLUGIN_MELLOWDSP_DESC    Advanced DSP with FIR, resampling and CamillaDSP integration
-}
+PLUGIN_MELLOWDSP	EN	Mellow-DSP
+PLUGIN_MELLOWDSP_DESC	EN	Advanced DSP with FIR, resampling and CamillaDSP integration
