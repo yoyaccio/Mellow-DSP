@@ -3,7 +3,7 @@
   <name>MellowDSP</name>
   <module>Plugins::MellowDSP::Plugin</module>
   <version>0.3.13</version>
-  <description>Plugin Settings UI working version</description>
+  <description>Ultra minimal working plugin</description>
   <creator>yoyaccio</creator>
   <homepageURL>https://github.com/yoyaccio/Mellow-DSP</homepageURL>
   <category>audio</category>
