@@ -1,0 +1,32 @@
+[% PROCESS settings/header.html %]
+
+<h2>MellowDSP Settings</h2>
+
+<form method="POST" action="[% webroot %]plugins/MellowDSP/settings/index.html">
+    
+    <fieldset>
+        <legend>Basic Settings</legend>
+        
+        <p>
+            <input type="checkbox" name="enabled" id="enabled" value="1" [% IF enabled %]checked[% END %]>
+            <label for="enabled">Enable MellowDSP</label>
+        </p>
+        
+        <p>
+            <label for="upsampling">Upsampling Rate:</label>
+            <select name="upsampling" id="upsampling">
+                <option value="44100" [% IF upsampling == '44100' %]selected[% END %]>44.1 kHz</option>
+                <option value="88200" [% IF upsampling == '88200' %]selected[% END %]>88.2 kHz</option>
+                <option value="176400" [% IF upsampling == '176400' %]selected[% END %]>176.4 kHz</option>
+                <option value="352800" [% IF upsampling == '352800' %]selected[% END %]>352.8 kHz</option>
+            </select>
+        </p>
+        
+    </fieldset>
+    
+    <br>
+    <input type="submit" name="saveSettings" value="Apply">
+    
+</form>
+
+[% PROCESS settings/footer.html %]

@@ -2,9 +2,10 @@
 <extension>
   <name>MellowDSP</name>
   <module>Plugins::MellowDSP::Plugin</module>
-  <version>0.3.13</version>
-  <description>Ultra minimal working plugin</description>
+  <version>1.0.0</version>
+  <description>Working DSP plugin with settings page</description>
   <creator>yoyaccio</creator>
+  <email>yoyaccio@gmail.com</email>
   <homepageURL>https://github.com/yoyaccio/Mellow-DSP</homepageURL>
   <category>audio</category>
   <targetApplication>
