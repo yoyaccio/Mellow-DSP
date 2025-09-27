@@ -3,7 +3,7 @@
   <name>MellowDSP</name>
   <module>Plugins::MellowDSP::Plugin</module>
   <version>0.3.13</version>
-  <description>Fix strings.txt: block format pure (no TABs)</description>
+  <description>Plugin Settings UI working version</description>
   <creator>yoyaccio</creator>
   <homepageURL>https://github.com/yoyaccio/Mellow-DSP</homepageURL>
   <category>audio</category>

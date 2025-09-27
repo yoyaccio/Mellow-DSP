@@ -5,17 +5,9 @@ use warnings;
 use base qw(Slim::Web::Settings);
 use Slim::Utils::Log;
 use Slim::Utils::Prefs;
-use File::Path qw(make_path);
-use File::Spec::Functions qw(catdir catfile);
 
 my $log   = logger('plugin.mellowdsp');
 my $prefs = preferences('plugin.mellowdsp');
-
-sub new {
-    my $class = shift;
-    my $self = $class->SUPER::new(@_);
-    return $self;
-}
 
 sub name {
     return 'PLUGIN_MELLOWDSP';
@@ -26,22 +18,23 @@ sub page {
 }
 
 sub prefs {
-    return ($prefs, qw(enabled upsampling phase depth dither precision outputfmt fir_left fir_right fir_text));
+    return ($prefs, qw(enabled upsampling phase));
 }
 
 sub handler {
     my ($class, $client, $params) = @_;
 
-    my $base = Slim::Utils::PluginManager->allPlugins->{'MellowDSP'}->{basedir};
-    my $datadir = catdir($base, 'data');
-    make_path($datadir) unless -d $datadir;
-
     if ($params->{saveSettings}) {
-        foreach my $key (qw(enabled upsampling phase depth dither precision outputfmt fir_left fir_right fir_text)) {
-            $prefs->client($client)->set($key, $params->{$key});
-        }
-        $log->info("MellowDSP settings saved");
+        $prefs->set('enabled', $params->{enabled} ? 1 : 0);
+        $prefs->set('upsampling', $params->{upsampling} || '44100');
+        $prefs->set('phase', $params->{phase} || 'linear');
+        
+        $log->info("MellowDSP settings saved: enabled=" . ($params->{enabled} || 0));
     }
+
+    $params->{enabled} = $prefs->get('enabled') || 0;
+    $params->{upsampling} = $prefs->get('upsampling') || '44100';
+    $params->{phase} = $prefs->get('phase') || 'linear';
 
     return $class->SUPER::handler($client, $params);
 }
