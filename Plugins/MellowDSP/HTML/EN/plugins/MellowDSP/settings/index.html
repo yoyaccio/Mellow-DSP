@@ -1,31 +1,82 @@
 [% PROCESS settings/header.html %]
 
-<h2>MellowDSP Settings</h2>
+<style>
+.mellowdsp-section { margin: 20px 0; padding: 15px; border: 1px solid #ccc; border-radius: 5px; }
+.mellowdsp-section h3 { margin-top: 0; color: #333; }
+</style>
+
+<h2>MellowDSP v0.4.0.0 Settings</h2>
 
 <form method="POST" action="[% webroot %]plugins/MellowDSP/settings/index.html">
     
-    <fieldset>
-        <legend>Basic Settings</legend>
-        
+    <div class="mellowdsp-section">
+        <h3>Basic Settings</h3>
         <p>
             <input type="checkbox" name="enabled" id="enabled" value="1" [% IF enabled %]checked[% END %]>
-            <label for="enabled">Enable MellowDSP</label>
+            <label for="enabled"><strong>Enable MellowDSP Processing</strong></label>
         </p>
-        
+    </div>
+    
+    <div class="mellowdsp-section">
+        <h3>Upsampling</h3>
         <p>
-            <label for="upsampling">Upsampling Rate:</label>
+            <label for="upsampling">Target Sample Rate:</label>
             <select name="upsampling" id="upsampling">
-                <option value="44100" [% IF upsampling == '44100' %]selected[% END %]>44.1 kHz</option>
+                <option value="44100" [% IF upsampling == '44100' %]selected[% END %]>44.1 kHz (Original)</option>
                 <option value="88200" [% IF upsampling == '88200' %]selected[% END %]>88.2 kHz</option>
                 <option value="176400" [% IF upsampling == '176400' %]selected[% END %]>176.4 kHz</option>
                 <option value="352800" [% IF upsampling == '352800' %]selected[% END %]>352.8 kHz</option>
+                <option value="705600" [% IF upsampling == '705600' %]selected[% END %]>705.6 kHz</option>
+                <option value="768000" [% IF upsampling == '768000' %]selected[% END %]>768 kHz</option>
             </select>
         </p>
         
-    </fieldset>
+        <p>
+            <label for="phase">Phase Response:</label>
+            <select name="phase" id="phase">
+                <option value="linear" [% IF phase == 'linear' %]selected[% END %]>Linear Phase</option>
+                <option value="intermediate" [% IF phase == 'intermediate' %]selected[% END %]>Intermediate Phase</option>
+                <option value="minimum" [% IF phase == 'minimum' %]selected[% END %]>Minimum Phase</option>
+            </select>
+        </p>
+    </div>
+    
+    <div class="mellowdsp-section">
+        <h3>Output Format</h3>
+        <p>
+            <label for="depth">Output Bit Depth:</label>
+            <select name="depth" id="depth">
+                <option value="16" [% IF depth == '16' %]selected[% END %]>16-bit</option>
+                <option value="24" [% IF depth == '24' %]selected[% END %]>24-bit</option>
+                <option value="32" [% IF depth == '32' %]selected[% END %]>32-bit</option>
+            </select>
+        </p>
+        
+        <p>
+            <label for="dither">Dithering:</label>
+            <select name="dither" id="dither">
+                <option value="none" [% IF dither == 'none' %]selected[% END %]>None</option>
+                <option value="triangular" [% IF dither == 'triangular' %]selected[% END %]>Triangular</option>
+                <option value="shaped" [% IF dither == 'shaped' %]selected[% END %]>Shaped</option>
+                <option value="lipshitz" [% IF dither == 'lipshitz' %]selected[% END %]>Lipshitz</option>
+                <option value="fweighted" [% IF dither == 'fweighted' %]selected[% END %]>F-weighted</option>
+            </select>
+        </p>
+        
+        <p>
+            <label for="precision">Target Precision:</label>
+            <select name="precision" id="precision">
+                <option value="16" [% IF precision == '16' %]selected[% END %]>16-bit</option>
+                <option value="18" [% IF precision == '18' %]selected[% END %]>18-bit</option>
+                <option value="20" [% IF precision == '20' %]selected[% END %]>20-bit</option>
+                <option value="22" [% IF precision == '22' %]selected[% END %]>22-bit</option>
+                <option value="24" [% IF precision == '24' %]selected[% END %]>24-bit</option>
+            </select>
+        </p>
+    </div>
     
     <br>
-    <input type="submit" name="saveSettings" value="Apply">
+    <input type="submit" name="saveSettings" value="Apply Settings" style="font-size: 14px; padding: 8px 16px;">
     
 </form>
 
