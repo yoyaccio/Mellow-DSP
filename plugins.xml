@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extensions>
   <plugins>
-    <plugin name="MellowDSP" version="1.0.0" minTarget="7.9" maxTarget="*">
+    <plugin name="MellowDSP" version="1.0.1" minTarget="7.9" maxTarget="*">
       <title lang="EN">Mellow-DSP</title>
-      <desc lang="EN">Working DSP plugin with settings page</desc>
+      <desc lang="EN">Ultra minimal test</desc>
       <category>audio</category>
       <creator>yoyaccio</creator>
       <email>yoyaccio@gmail.com</email>
       <homepageURL>https://github.com/yoyaccio/Mellow-DSP</homepageURL>
-      <url>https://raw.githubusercontent.com/yoyaccio/Mellow-DSP/main/packages/MellowDSP-1.0.0.zip</url>
-      <sha>19ca479315f53eda4ae48ecd6ad462aad056e02c</sha>
+      <url>https://raw.githubusercontent.com/yoyaccio/Mellow-DSP/main/packages/MellowDSP-1.0.1.zip</url>
+      <sha>4f4372e5df6bb210e51a9889e4fdd30fa1b9503c</sha>
     </plugin>
   </plugins>
 </extensions>

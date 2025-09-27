@@ -2,11 +2,9 @@
 <extension>
   <name>MellowDSP</name>
   <module>Plugins::MellowDSP::Plugin</module>
-  <version>1.0.0</version>
-  <description>Working DSP plugin with settings page</description>
+  <version>1.0.1</version>
+  <description>Ultra minimal test</description>
   <creator>yoyaccio</creator>
-  <email>yoyaccio@gmail.com</email>
-  <homepageURL>https://github.com/yoyaccio/Mellow-DSP</homepageURL>
   <category>audio</category>
   <targetApplication>
     <id>SqueezeboxServer</id>
